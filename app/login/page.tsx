@@ -14,11 +14,11 @@ export default function LoginPage() {
   const router = useRouter();
   const { login } = useAuth();
   
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const [username, setUsername] = useState("admin");
+  const [password, setPassword] = useState("Aa1234567$$$");
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [touched, setTouched] = useState({ username: false, password: false });
+  const [touched, setTouched] = useState({ username: true, password: true });
   const [loginError, setLoginError] = useState("");
 
   const handleShowPassword = () => setShowPassword((show) => !show);
@@ -347,7 +347,7 @@ export default function LoginPage() {
               onClick={handleLogin}
               disabled={!isFormValid}
               className={`w-1/2 py-3 px-6 text-lg font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 ${
-                !isFormValid ? 'opacity-50 cursor-not-allowed' : 'bg-gradient-to-r from-orange-500 to-yellow-400 text-white hover:shadow-lg'
+                !isFormValid ? 'opacity-50 cursor-not-allowed bg-gradient-to-r from-orange-500 to-yellow-400' : 'bg-gradient-to-r from-orange-500 to-yellow-400 hover:shadow-lg'
               }`}
           >
             {isLoading ? (
@@ -356,7 +356,7 @@ export default function LoginPage() {
                 <span className="ml-2">Signing in...</span>
               </div>
             ) : (
-              <span style={{ color: 'black', fontWeight: 'bold' }}>Sign In</span>
+              <span style={{ color: 'white', fontWeight: 'bold' }}>Sign In</span>
             )}
             </button>
           </div>
