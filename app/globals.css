@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #18181b;
+  color: #f3f3f3;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #FF5722 0%, #FF9800 50%, #FFC107 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+
+.btn-gradient {
+  background: linear-gradient(90deg, #FF5722 0%, #FF9800 50%, #FFC107 100%);
+  transition: all 0.3s ease;
+}
+
+.btn-gradient:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -5px rgba(255, 87, 34, 0.4);
+}
+
+.floating {
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.copy-btn {
+  transition: all 0.2s ease;
+}
+
+.copy-btn:hover {
+  transform: scale(1.05);
+}
+
+.copy-btn:active {
+  transform: scale(0.95);
+}
+
+.bg-white {
+  background-color: #232323 !important;
+}
+
+.text-gray-600, .text-gray-700, .text-gray-500, .text-gray-400 {
+  color: #e0e0e0 !important;
+}
+
+.border-gray-100, .border-gray-200 {
+  border-color: #333 !important;
+}
+
+.shadow-lg, .shadow-sm, .shadow-md, .shadow-xl {
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.5) !important;
+} 
